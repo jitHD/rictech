@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+#login-form {
+	margin:5% auto;
+	max-width:500px;
+}
+/* home page */
+#wrapper{
+	padding-top:50px;
+}
+
+/*
+#outer {margin: 0 auto;width: 50%;border-top: #333 2px solid;background-color: #FFFFFF;}
+.student-item input[type="text"] {padding: 5px;border:#ccc 1px solid;border-radius:4px;margin: 0px 10px;}
+.student-item input[type="checkbox"] {margin: 10px;}
+.grad_student-item input[type="text"] {padding: 5px;border:#ccc 1px solid;border-radius:4px;margin: 0px 10px;}
+.grad_student-item input[type="checkbox"] {margin: 10px;}
+.publications-item input[type="text"] {padding: 5px;border:#ccc 1px solid;border-radius:4px;margin: 0px 10px;}
+.publications-item input[type="checkbox"] {margin: 10px;}
+#header div{padding: 20px 5px 15px;margin: 0px 10px;}
+.col-heading{width:150px;font-size:16px;font-weight:bold;}
+.footer{padding:10px; background:#333;margin-top:20px;}
+.btn-action{padding:10px;}
+.btn-action input[type="button"]{padding:5px; border:#CCCCCC 1px solid; border-radius: 4px;}
+input[type="submit"]{padding:5px 20px; border:#000000 1px solid; border-radius: 4px; background-color:#09f;color:#fff;}
+.success{color:#66CC00;padding: 5px; font-weight:bold;}*/

@@ -1,0 +1,270 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+* {
+  box-sizing: border-box;
+}
+body{
+  background: #383637;
+  height:auto;
+}
+.grey_color{
+  background: #383637;
+}
+
+img{
+  width: 90vw;
+}
+.phone{
+  width: 10%;
+}
+
+.what{
+  padding:1vw;
+  background-color: #43cd4d;
+  text-align: justify;
+}
+.how{
+  padding:1vw;
+  background-color: #3dbea1;
+}
+
+.t_center{
+  text-align: center;
+}
+.t_white{
+  color: #ffffff;
+}
+
+.button{
+  background-color: #6afe78;
+  min-height:30px;
+  border-radius:10px;
+}
+
+.back{
+
+}
+
+
+[class*="col-"] {
+  width: 100%;
+  float: left;
+  border: 1px solid black;
+
+}
+@media only screen and (max-width:500px)
+{
+  body{
+    height:100%;
+    background-color: #383637;
+  }
+  .heading{
+    display: none;
+  }
+}
+@media only screen and (min-width:500px)
+{
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+img{
+  width: 30vw;
+}
+
+}
+
+.left_top{
+  padding: 10px;
+  float:left;
+  width:46vw;
+  background-color: #028b0c;
+}
+
+
+
+
+.child {
+  float: left;
+  border:2px;
+  border-color: red;
+  height: 33vh;
+  width: 32.55vw;
+  background-color:#009473;
+
+  border:1px solid #CCC;
+
+      box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+      cursor:pointer;
+
+
+      padding: 5px;
+      text-align: center;
+
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.row{
+  text-align:center;
+
+}
+
+#close {
+   line-height: 12px;
+   width: 25px;
+   font-size: 8pt;
+   font-family: tahoma;
+   margin-top: 1px;
+   margin-right: 2px;
+   position:absolute;
+   top:0;
+   right:0;
+}
+
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  width: 800px;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:15px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}

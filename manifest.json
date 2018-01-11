@@ -1,0 +1,15 @@
+    {
+      "lang": "en",
+      "dir": "ltr",
+      "name": "Village ICT App",
+      "description": "This app helps you donate to worthy causes.",
+      "short_name": "Donate",
+      "scope": "/racer/",
+      "start_url": "v_menu.php",
+      "display": "fullscreen",
+      "orientation": "landscape",
+      "theme_color": "aliceblue",
+      "background_color": "red",
+
+      
+    }
