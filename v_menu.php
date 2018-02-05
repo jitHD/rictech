@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['user']))
+{
+  header("Location: design_login.php?ori_log=v_menu.php");
+  die();
+}else{
 ?>
 <html>
 <head>
@@ -50,3 +55,4 @@
 
 
 </html>
+<?php } ?>

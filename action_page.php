@@ -1,5 +1,11 @@
 
 <?php
+session_start();
+if(!isset($_SESSION['user']))
+{
+  header("Location: design_login.php?ori_log=action_page.php");
+  die();
+}else{
 
 include('conn.php');
 
@@ -28,5 +34,6 @@ header("location:welcome.php");
 }
 else {
 echo "Wrong Username or Password";
+}
 }
 ?>

@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['user']))
+{
+  header("Location: design_login.php?ori_log=construction.php");
+  die();
+}else{
 ?>
 <html>
 <head>
@@ -11,3 +16,5 @@
 
 </body>
 </html>
+
+<?php } ?>

@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['user']))
+{
+  header("Location: design_login.php?ori_log=disaster_helpline.php");
+  die();
+}else{
 
 ?>
 
@@ -22,3 +27,5 @@
 
   </body>
 </html>
+
+<?php } ?>
