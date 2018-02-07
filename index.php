@@ -7,7 +7,7 @@ if(!isset($_SESSION['user']))
 }else{
 
 ?>
-
+<html>
 
 <head>
 <title>RICTech</title>
@@ -23,7 +23,7 @@ if(!isset($_SESSION['user']))
     <div onclick="launchIntoFullscreen(document.documentElement);" >
     <div class="topright" onclick="exitFullscreen();"><img id="close" src="image/close.png" /></div>
     <div id="page">
-    <div class="12"  onclick="setPresent('index.php');loadPage('v_menu.php');">
+      <div class="12"  onclick="setPresent('index.php');loadPage('v_menu.php');">
       <div class="col-12 t_center t_white">
         <h1>RICTech</h1>
         <h4>Village Information and Communication Technology</h4>
@@ -48,13 +48,14 @@ if(!isset($_SESSION['user']))
           </p>
           <p>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;</p>
         </div>
-</div>
-<div class="col-5"></div><div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5"></div>
-</div>
-</div>
+    </div>
+      <div class="col-5"></div>
+      <div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5"></div>
+    </div>
+    </div>
 
 
-</div>
+
 
   </body>
 </html>

@@ -1,18 +1,4 @@
-<?php
 
-
-?>
-
-
-<head>
-<title>Common Ailments</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="./css/village.css">
-
-
-  </head>
-  <body>
       <div class="col-12 t_center t_white heading">
         <h1>Common Ailments</h1>
         <h4></h4>
@@ -39,9 +25,4 @@
 
 </tbody>
 </table>
-    </div>
-
-
-
-  </body>
-</html>
+</div>

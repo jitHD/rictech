@@ -1,4 +1,5 @@
 var pages = ["index.php"];
+/* ----------------------- Load Page ------------------------------ */
 function loadPage(page_name) {
   var page = page_name;
   var xhttp = new XMLHttpRequest();
@@ -11,10 +12,12 @@ function loadPage(page_name) {
   xhttp.send();
 };
 
+/* ------------------------ Navigation Present ---------------------- */
 function setPresent(present) {
 pages.push(present);
 };
 
+/* ------------------------ Navigation Back ------------------------- */
 function goBack(){
   var xhttp = new XMLHttpRequest();
   present_page = pages.pop();
@@ -27,12 +30,13 @@ function goBack(){
   xhttp.send();
 };
 
+/* ------------------------- Hospital Functions ------------------------- */
 function loadhospital()
 {
 
 var pin=document.getElementById("pin_code").value;
-load_data(pin);	
- 
+load_data(pin);
+
 function load_data(pin_code)
  {
 
@@ -49,12 +53,13 @@ function load_data(pin_code)
 
 };
 
+/* ------------------------ Hospital Load Sickness ------------------ */
 function loadsickness()
 {
 
 var symptoms=document.getElementById("symptom").value;
-load_data(symptoms);	
- 
+load_data(symptoms);
+
 function load_data(symptoms)
  {
 

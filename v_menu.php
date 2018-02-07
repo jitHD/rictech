@@ -1,23 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['user']))
-{
-  header("Location: design_login.php?ori_log=v_menu.php");
-  die();
-}else{
-?>
-<html>
-<head>
-<title>RICTech Menu</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="./css/village.css" rel='stylesheet' type='text/css'>
-<script src="../js/ajax.js" type="text/jscript"></script>
-
-</head>
-<body>
-
 <div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php');">
   <h4><b>Home</b></h4></div><div class="col-1"></div>
 
@@ -48,11 +28,3 @@ if(!isset($_SESSION['user']))
       <img  src="./image/news.png" alt="" style="width: 100%; object-fit: contain;"></div>
     <div class="col-4 grey_color" onclick="setPresent('v_menu.php');loadPage('skill_development.php');">
       <img  src="./image/skill.png" alt="" style="width: 100%; object-fit: contain;"></div>
-
-
-
-</body>
-
-
-</html>
-<?php } ?>

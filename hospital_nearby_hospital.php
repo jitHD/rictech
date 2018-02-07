@@ -1,23 +1,4 @@
-<?php
 
-
-?>
-
-
-<head>
-<title>Best Practices</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="./css/village.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-
-
-
-
-  </head>
-  <body>
       <div class="col-12 t_center t_white heading" >
         <h1>RICTech</h1>
         <h4>Village Information and Communication Technology</h4>
@@ -39,5 +20,3 @@
     </div>
     <div class="col-6">
     </div>
-  </body>
-</html>

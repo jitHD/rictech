@@ -6,3 +6,7 @@ echo $json_decoded;
 
  ?>
 http://14.139.247.11/citywx/city_weather.php?id=42413
+
+
+
+//Googleapi Key:  AIzaSyDpYZDP1keXfk5q2iZ_5vP347nZoT4GF2o
