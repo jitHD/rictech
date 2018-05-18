@@ -3,7 +3,7 @@ if(isset($_GET['type']))
 {
   echo $_GET['type'];
   $product_type=$_GET['type'];
-$conn = mysqli_connect("localhost","root","root","buy_sell");
+require_once 'connect.php';
 
 $data=mysqli_query($conn,"SELECT * FROM $product_type ORDER BY add_date DESC") or die(mysqli_error($conn));
 
@@ -30,7 +30,7 @@ echo "</table>";
      var txt;
      var r = confirm("Are you interested in buying this item?");
      if (r == true) {
-       
+
          txt = "<?php echo 'id: '; ?>"+val;
      } else {
          txt = "<?php echo "How are you?"; ?>";
