@@ -1,3 +1,6 @@
+
+
+
 var pages = ["index.php"];
 /* ----------------------- Load Page ------------------------------ */
 function loadPage(page_name) {
@@ -75,6 +78,52 @@ function load_data(symptoms)
  }
 
 };
+
+/* ------------------------ SCHEMES --------------------------------- */
+function loadscheme(val){
+
+  var id_val = val;
+
+  var load_value=document.getElementById(id_val).value;
+  load_data(load_value,id_val);
+
+  function load_data(load_value,id_val){
+    $.ajax({
+      url:"./js/loadschemes.php",
+      method:"POST",
+      data:{input_val:load_value,input_tab:id_val},
+      success:function(result)
+        {
+          $('#schemes_info').html(result);
+        }
+    });
+ }
+
+};
+
+/*######################## Officials ############################*/
+
+function loadofficial(val){
+
+  var id_val = val;
+
+  var load_value=document.getElementById(id_val).value;
+  load_data(load_value,id_val);
+
+  function load_data(load_value,id_val){
+    $.ajax({
+      url:"./js/loadofficial.php",
+      method:"POST",
+      data:{input_val:load_value,input_tab:id_val},
+      success:function(result)
+        {
+          $('#official_info').html(result);
+        }
+    });
+ }
+
+};
+
 
 
 

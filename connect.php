@@ -6,7 +6,7 @@ $username = "root";
 
 $password = "root";
 
-$dbname = "doctors";
+$dbname = "rictech";
 
 
 

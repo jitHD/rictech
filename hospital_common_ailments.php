@@ -13,17 +13,13 @@
       <div class="col-1 button t_center" onclick="loadPage('index.php')">
       <h4><b>Home</b></h4>
       </div>
-      <div class="col-1"></div>
-      <div class="col-10 t_center t_white">
+     
+      <div class="col-12 t_center t_white">
         <br />
         Search By Symptoms: <input type="text" name="symptom" id="symptom" onkeyup="loadsickness();">
-        <table class="table-fill">
+        <table style="table-layout:fixed; width:100%;">
           <thead>
-            <tr>
-              <th class="text-left">Sickness</th>
-              <th class="text-left">Symptoms</th>
-              <th class="text-left">Best Practices</th>
-            </tr>
+           
           </thead>
           <tbody class="table-hover" id="sickness_info">
 

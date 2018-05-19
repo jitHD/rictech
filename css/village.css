@@ -17,9 +17,16 @@ body{
 
 }
 
+@media only screen and (max-width:300px)
+{
+  table, thead, tbody, th, td, tr {
+      display: block;
+    }
+}
+
 /* -------------------------- Medium Screen ------------------------ */
 
-@media only screen and (min-width:300px)
+@media only screen and (min-width:300px) and (max-width:500px)
 {
 
   [class*="col-"] {
@@ -32,6 +39,11 @@ body{
   .heading{
     display: none;
   }
+
+  table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
 }
 
 /* -------------------------- Large Screen -------------------------- */
@@ -54,14 +66,14 @@ img{
   width: 30vw;
 }
 
+
+
 }
 
 /* ------------------------------ Screen End -------------------------- */
 
 
-img{
-  width: 90vw;
-}
+
 .phone{
   width: 10%;
 }
@@ -167,6 +179,8 @@ div .table-title {
 }
 
 
+
+
 .table-title h3 {
    color: #fafafa;
    font-size: 30px;
@@ -181,11 +195,11 @@ div .table-title {
   background: white;
   border-radius:3px;
   border-collapse: collapse;
-  height: 320px;
+  /*height: 320px;*/
   margin: auto;
   max-width: 600px;
   padding:5px;
-  width: 50%;
+  /*width: 50%;*/
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
 }
@@ -215,7 +229,7 @@ th:last-child {
 tr {
   border-top: 1px solid #C1C3D1;
   border-bottom-: 1px solid #C1C3D1;
-  width: 800px;
+  /*width: 800px;*/
   color:#666B85;
   font-size:16px;
   font-weight:normal;
