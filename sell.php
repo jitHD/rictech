@@ -1,5 +1,5 @@
 <?php
-
+require_once './connect.php';
 session_start();
 if(!isset($_SESSION['user']))
 {
@@ -7,16 +7,16 @@ if(!isset($_SESSION['user']))
   die();
 }else{
 
-
-
   $success = "";
   $error_message = "";
-  $conn = mysqli_connect("localhost","root","root","user_otp_login");
+
 
   if(isset($_POST['phone'])) {
+
     $phone_number="91".$_POST['phone'];
     $result = mysqli_query($conn,"SELECT * FROM registered_users WHERE phone='" . $_POST["phone"] . "'") or die(mysqli_error($conn));
   	$count  = mysqli_num_rows($result);
+    echo $count;
   	if($count>0) {
   		// generate OTP
   		//$otp = rand(100000,999999);
@@ -31,7 +31,6 @@ if(!isset($_SESSION['user']))
       else
         goto i;
       }
-
 
       //NOT WORKING ## $result = mysqli_query($conn,"IF EXISTS(SELECT * FROM otp_expiry WHERE phone=$phone_number) THEN UPDATE otp_expiry SET is_expired=0 AND created_at = NOW() AND expiring_at = DATE_ADD(NOW(), INTERVAL 1 MINUTE) AND otp = $otp WHERE phone=$phone_number; ELSE INSERT INTO otp_expiry(otp,phone,is_expired,created_at,expiring_at) VALUES ('$otp','$phone_number',0,'NOW()',DATE_ADD(NOW(), INTERVAL 1 MINUTE)); END IF") or die(mysqli_error($conn));
       $result = mysqli_query($conn,"SELECT * FROM otp_expiry WHERE phone='$phone_number'") or die(mysqli_error($conn));

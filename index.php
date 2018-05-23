@@ -1,11 +1,12 @@
 <?php
+/*
 session_start();
 if(!isset($_SESSION['user']))
 {
   header("Location: design_login.php?ori_log=index.php");
   die();
 }else{
-
+*/
 ?>
 <html>
 
@@ -49,8 +50,8 @@ if(!isset($_SESSION['user']))
           <p>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;</p>
         </div>
     </div>
-      <div class="col-5"></div>
-      <div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5"></div>
+      <div class="col-5 empty"></div>
+      <div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5 empty"></div>
     </div>
     </div>
 
@@ -62,4 +63,4 @@ if(!isset($_SESSION['user']))
 
 
 <?php
-} ?>
+//} ?>
