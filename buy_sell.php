@@ -1,11 +1,13 @@
 <?php
-
+/*
 session_start();
 if(!isset($_SESSION['user']))
 {
   header("Location: design_login.php?ori_log=buy_sell.php");
   die();
 }else{
+
+*/
 ?>
 
 <head>
@@ -35,5 +37,5 @@ if(!isset($_SESSION['user']))
       </div>
   </body>
 </html>
-
-<?php } ?>
+ 
+<?php // } ?>
