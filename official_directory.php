@@ -19,7 +19,7 @@
       <div class="col-12 t_center t_white">
         <br />
 
-        <table class="table-fill">
+        <table style='table-layout:fixed; width:100%;'>
           <thead>
             <tr>
               <th class="text-left">Name<br><input type="text" name="name" id="name" onkeyup="loadofficial('name');"></th>
