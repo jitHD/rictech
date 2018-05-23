@@ -1,11 +1,12 @@
 <?php
+/*
 session_start();
 if(!isset($_SESSION['user']))
 {
   header("Location: design_login.php?ori_log=disaster_helpline.php");
   die();
 }else{
-
+*/
 ?>
 
 <head>
@@ -49,4 +50,4 @@ if(!isset($_SESSION['user']))
   </body>
 </html>
 
-<?php } ?>
+<?php // } ?>
