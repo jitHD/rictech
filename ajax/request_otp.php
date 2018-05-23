@@ -86,6 +86,7 @@ if(isset($_POST['number'])) {
     // }*/
   } else {
     echo "User doesnot Exists !!";
+    
   }
 }
 

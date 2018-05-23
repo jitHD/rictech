@@ -14,7 +14,7 @@ if(isset($_POST["ip_otp"])) {
     echo "Successfull";
     ?>
     <script>
-    loadPage('../buy_sell.php');
+    loadPage('./sell_index.php');
     </script>
     <?php
   } else {

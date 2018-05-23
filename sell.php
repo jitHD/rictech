@@ -33,6 +33,7 @@ if(!isset($_SESSION['user']))
      <?php
      if(!empty($error_message))
   ?>
+        <center>
           <form id="submit_otp" style="display:none">
              <table>
             <tr><td>Enter OTP: </td><td><input type="text" id="ip_otp" placeholder="OTP"></td></tr>
@@ -49,7 +50,7 @@ if(!isset($_SESSION['user']))
        </table>
      </form>
 
-
+  </center>
       </div>
 
 
