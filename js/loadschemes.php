@@ -11,12 +11,12 @@ $res = mysqli_query($conn,"SELECT * FROM schemes WHERE $tab LIKE '%$sym%';") or 
 while($row=mysqli_fetch_array($res))
 {
 
- echo "<tr>";
+ echo "<a href='".$row['url']."'><tr>";
  echo "<td class='text-left'>".$row['scheme']."</td>";
  echo "<td class='text-left'>".$row['ministry']."</td>";
  echo "<td class='text-left'>".$row['sector']."</td>";
  echo "<td class='text-left'>".$row['provision']."</td>";
- echo "</tr>";
+ echo "</tr></a>";
 }
 
 }
