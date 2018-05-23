@@ -1,11 +1,12 @@
 <?php
+/*
 session_start();
 if(!isset($_SESSION['user']))
 {
   header("Location: design_login.php?ori_log=disaster_helpline.php");
   die();
 }else{
-
+*/
 ?>
 
 <head>
@@ -21,25 +22,25 @@ if(!isset($_SESSION['user']))
       <h4><b>Home</b></h4></div><div class="col-1"></div>
 
 
-      <div class="col-6 red t_center t_white" onclick="setPresent('');loadPage('');">
+      <div class="col-6 red t_center t_white" onclick="setPresent('disaster_helpline.php');loadPage('disaster_response.php');" style="min-height:40vh">
         <h2>RESPONSE</h2>
         <!--<img id="emergency" src="image/#.png">-->
 
       </div>
 
-      <div class="col-6 orange t_center t_white" onclick="setPresent('');loadPage('')">
+      <div class="col-6 orange t_center t_white" onclick="setPresent('disaster_helpline.php');loadPage('disaster_recovery.php')" style="min-height:40vh">
           <h2>RECOVERY</h2>
         <!--  <img id="ambulance" src="image/#.png"> -->
       </div>
 
 
-      <div class="col-6 blue t_center t_white" onclick="setPresent('');loadPage('')">
+      <div class="col-6 blue t_center t_white" onclick="setPresent('');loadPage('')" style="min-height:40vh">
             <h2>MITIGATION</h2>
         <!--  <img id="ailments" src="image/#.png"> -->
 
       </div>
 
-      <div class="col-6 green t_center t_white" onclick="setPresent('');loadPage('')">
+      <div class="col-6 green t_center t_white" onclick="setPresent('');loadPage('')" style="min-height:40vh">
           <h2>PREPARATION</h2>
         <!--  <img id="practices" src="image/#.png"> -->
         </div>
@@ -49,4 +50,4 @@ if(!isset($_SESSION['user']))
   </body>
 </html>
 
-<?php } ?>
+<?php // } ?>
