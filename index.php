@@ -17,7 +17,42 @@ if(!isset($_SESSION['user']))
 <link rel="stylesheet" type="text/css" href="./css/village.css">
 <script src="./js/ajax.js" type="text/jscript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function req_otp()
+{
+  var number=document.getElementById('number').value;
+  var dataString='number='+number;
+  $.ajax({
+    type:"post",
+    url:"ajax/request_otp.php",
+    data:dataString,
+    cache:false,
+    success: function(html){
+      $('#msg').html(html);
 
+    }
+  })
+  return false;
+}
+
+function submit_otp()
+{
+  var ip_otp=document.getElementById('ip_otp').value;
+  var dataString='ip_otp='+ip_otp;
+  $.ajax({
+    type:"post",
+    url:"ajax/submit_otp.php",
+    data:dataString,
+    cache:false,
+    success: function(html){
+      $('#otp_msg').html(html);
+
+    }
+  })
+  return false;
+}
+
+</script>
 </head>
   <body>
     <div onclick="launchIntoFullscreen(document.documentElement);" >
