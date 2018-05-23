@@ -28,7 +28,7 @@ if(!isset($_SESSION['user']))
 
       </div>
 
-      <div class="col-6 orange t_center t_white" onclick="setPresent('');loadPage('')" style="min-height:40vh">
+      <div class="col-6 orange t_center t_white" onclick="setPresent('disaster_helpline.php');loadPage('disaster_recovery.php')" style="min-height:40vh">
           <h2>RECOVERY</h2>
         <!--  <img id="ambulance" src="image/#.png"> -->
       </div>
