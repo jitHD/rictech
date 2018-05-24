@@ -76,19 +76,25 @@ return false;
 
 function uploadFile()
 {
-  var product_name=document.getElementById('file_1').value;
-  var quantity=document.getElementById('file_2').value;
-  var unit=document.getElementById('file_3').value;
-  var price=document.getElementById('file_4').value;
-  var dataString='file_1='+product_name+'&file_2='+quantity+'&file_3='+unit+'&file_4='+price;
+  var form_data = new FormData();
+  form_data.append("file", document.getElementById('file').files[0]);
+  // var product_name=document.getElementById('file_1').value;
+  // var quantity=document.getElementById('file_2').value;
+  // var unit=document.getElementById('file_3').value;
+  // var price=document.getElementById('file_4').value;
+  //var dataString='file_1='+product_name+'&file_2='+quantity+'&file_3='+unit+'&file_4='+price;
   $.ajax({
     type:"post",
     url:"upload_files_action.php",
-    data:dataString,
+    data:form_data,
     cache:false,
-    success: function(html){
-      $('#add_product').html(html);
-
+    processData: false,
+    beforeSend:function(){
+     $('#uploaded_image').html("<label class='text-success'>Image Uploading...</label>");
+    },
+    success:function(data)
+    {
+     $('#uploaded_image').html(data);
     }
   })
 
