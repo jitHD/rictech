@@ -24,7 +24,7 @@ echo "<br>".$price;
 require_once '../connect.php';
 //$conn = mysqli_connect("localhost","root","root","buy_sell");
 
-if(mysqli_query($conn,"INSERT INTO `$type` (`id`, `seller`, `product_name`, `photo_1`, `photo_2`, `photo_3`, `photo_4`, `quantity`, `unit`, `price`, `number_of_requests`, `add_date`) VALUES ('$id', '$seller', '$product_name', '', '', '', '', '$quantity', '$unit', '$price', '0', CURRENT_TIMESTAMP)"))
+if(mysqli_query($conn,"INSERT INTO `$type` (id, seller, product_name, photo_1, photo_2, photo_3, photo_4, quantity, unit, price, number_of_requests, add_date) VALUES ('$id', '$seller', '$product_name', '', '', '', '', $quantity, '$unit', $price, 0, CURRENT_TIMESTAMP)"))
 {
   $_SESSION['product_id']=$id;
   //header("location:upload_files.php");
