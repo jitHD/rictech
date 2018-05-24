@@ -1,5 +1,6 @@
 
 <?php
+require_once './connect.php';
 if(isset($_GET['type']))
 {
   session_start();
@@ -10,6 +11,7 @@ if(isset($_GET['type']))
 
 <html>
 <head>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 <body>
 
@@ -22,21 +24,24 @@ if(isset($_GET['type']))
   <div class="col-1 empty"></div>
 <div class="col-12">
   <!-- <form action="sell_product_action.php" method="post"> -->
-  <form id="product_input" method="post">
-    <table align="center">
-      <tr><td>Product Name:</td><td><input id="pruduct_name" type="text" name="product" required></td></tr>
+  <form id="product_input">
+      <table>
+        <tr><td>Product Name:</td><td> <input id="pruduct_name" type="text"></td></tr>
+        <tr><td>Quantity:</td><td><input id="quantity" type="number" name="quantity" required>
+          <select id="unit" name="unit" required>
+            <option value="g">Grams</option>
+            <option value="Kg">Kilograms</option>
+            <option value="P">Piece</option>
+          </select>
+          </td></tr>
+        <tr><td>Price per quantity: </td><td><input id="price" type="float" name="price"></td></tr>
+        <tr><td colspan="2"><input type="submit" value="submit" onclick="return req_form_action();">&nbsp;<input type="reset" value="Reset">
+          <p style="color:Red;font-size:30px;" id="add_product"></p></td></tr>
+        <tr></tr>
+      </table>
+    </form>
 
-      <tr><td>Quantity:</td><td><input id="quantity" type="number" name="quantity" required>
-        <select id="unit" name="unit" required>
-          <option value="g">Grams</option>
-          <option value="Kg">Kilograms</option>
-          <option value="P">Piece</option>
-        </select>
-        </td></tr>
-      <tr><td>Price per quantity: </td><td><input id="price" type="float" name="price"></td></tr>
-      <tr><td colspan="2" align="center" onclick="return req_form_action();"><input type="submit" value="Submit">&nbsp;<input type="reset" value="Clear">
-        <p style="color:Red;font-size:30px;" id="add_product"></p></td></tr>
-  </form>
+  
 </div>
 </body>
 
