@@ -127,50 +127,44 @@
 </head>
 
 <body>
-
-  <a href="sell_product.php?type=cereals">
-    <div class="containers">
+  <div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
+  <h4><b>Home</b></h4></div><div class="col-1"></div>
+<!--  <a href="sell_product.php?type=cereals"> -->
+<div class="col-12">
+    <div class="containers" onclick="setPresent('sell_index.php');loadPage('sell_product.php?type=cereals');">
       <h3>Cereals</h3>
       <div class="cereals">
       </div>
     </div>
-  </a>
-  <a href="sell_product.php?type=oil_seeds">
-    <div class="containers">
+<!--  </a> -->
+
+    <div class="containers" onclick="setPresent('sell_index.php');loadPage('sell_product.php?type=oil_seeds');">
       <h3>Oil Seeds</h3>
       <div class="oil_seeds">
       </div>
     </div>
-  </a>
-  <a href="sell_product.php?type=fruits">
-    <div class="containers">
+  <div class="containers" onclick="setPresent('sell_index.php');loadPage('sell_product.php?type=fruits');">
       <h3>Fruits</h3>
       <div class="fruits">
       </div>
     </div>
-  </a>
-  <a href="sell_product.php?type=vegetables">
-    <div class="containers">
+    <div class="containers" onclick="setPresent('sell_index.php');loadPage('sell_product.php?type=vegetables');">
       <h3>Vegetables</h3>
       <div class="vegetables">
       </div>
     </div>
-  </a>
-  <a href="sell_product.php?type=spices">
-    <div class="containers">
+    <div class="containers" onclick="setPresent('sell_index.php');loadPage('sell_product.php?type=spices');">
       <h3>Spices</h3>
       <div class="spices">
       </div>
     </div>
-  </a>
-  <a href="sell_product.php?type=livestock">
-    <div class="containers">
+    <div class="containers" onclick="setPresent('sell_index.php');loadPage('sell_product.php?type=livestock');">
       <h3>Livestock/Poultry/Fishery</h3>
       <div class="livestock">
       </div>
     </div>
-  </a>
 
+</div>
 
 </body>
 </html>
