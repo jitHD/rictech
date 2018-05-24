@@ -12,11 +12,23 @@ if(isset($_POST["ip_otp"])) {
     $result = mysqli_query($conn,"UPDATE otp_expiry SET is_expired = 1 WHERE otp = '" . $otp_input . "'") or die(mysqli_error($conn));
     // $_SESSION['seller_verified']=1;
     echo "Successfull";
-    ?>
+    session_start();
+    if($_SESSION['buy_sell']=='buy'){
+      ?>
+      <script>
+      loadPage('./buy_index.php');
+      </script>
+      <?php
+    }else if($_SESSION['buy_sell']=='sell'){
+
+      ?>
     <script>
     loadPage('./sell_index.php');
     </script>
     <?php
+    }
+    $_SESSION['buy_sell']='authenticated';
+
   } else {
     $error_message = "Invalid OTP!";
 

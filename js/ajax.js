@@ -1,19 +1,13 @@
 
 
 
+
+
+
+
 var pages = ["index.php"];
 /* ----------------------- Load Page ------------------------------ */
-function loadPage(page_name) {
-  var page = page_name;
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("page").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", page, true);
-  xhttp.send();
-};
+
 
 /* ------------------------ Navigation Present ---------------------- */
 function setPresent(present) {

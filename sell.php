@@ -1,5 +1,15 @@
 <?php
 require_once './connect.php';
+session_start();
+if(isset($_SESSION['buy_sell']) && ($_SESSION['buy_sell']=='authenticated')){
+    ?>
+    <script>loadPage('sell_index.php');</script>
+    <?php
+
+}else{
+
+$_SESSION['buy_sell']="sell";
+
 /*
 session_start();
 if(!isset($_SESSION['user']))
@@ -62,4 +72,4 @@ if(!isset($_SESSION['user']))
   </body>
 </html>
 
-<?php // } ?>
+<?php  } ?>

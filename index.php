@@ -19,6 +19,20 @@ if(!isset($_SESSION['user']))
 <script src="./js/ajax.js" type="text/jscript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+
+function loadPage(page_name){
+  var page=page_name;
+  $.ajax({
+    type:'get',
+    url:page,
+    cache:false,
+    success:function(data){
+      $('#page').html(data);
+    }
+  })
+  return false;
+};
+
 function req_otp()
 {
   var number=document.getElementById('number').value;
@@ -52,6 +66,8 @@ function submit_otp()
   })
   return false;
 };
+
+
 
 function req_form_action()
 {
@@ -98,7 +114,7 @@ function uploadFile()
 return false;
 };
 */
-
+//############################ UPLOADING FILES #################################
 function uploadFile(){
 var upload = document.getElementById('uploadimage');
 $.ajax({
@@ -131,7 +147,7 @@ return false;
         <h4>Village Information and Communication Technology</h4>
 
       </div>
-
+      <div class="col-12">
       <!--What is RICTech -->
         <div class="col-6 what">
 
@@ -151,6 +167,7 @@ return false;
           <p>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;</p>
         </div>
     </div>
+  </div>
       <div class="col-5 empty"></div>
       <div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5 empty"></div>
     </div>

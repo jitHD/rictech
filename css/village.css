@@ -207,7 +207,7 @@ div .table-title {
   animation: float 5s infinite;
 }
 
-th {
+th .old{
   color:#D5DDE5;;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
@@ -229,7 +229,7 @@ th:last-child {
   border-right:none;
 }
 
-tr {
+tr .old{
   border-top: 1px solid #C1C3D1;
   border-bottom-: 1px solid #C1C3D1;
   /*width: 800px;*/
@@ -269,7 +269,7 @@ tr:last-child td:last-child {
   border-bottom-right-radius:3px;
 }
 
-td {
+td .old{
   background:#FFFFFF;
   padding:20px;
   text-align:left;
@@ -309,3 +309,10 @@ td.text-right {
 }
 
 /* ----------------------------------- Table End ------------------------ */
+
+table.buy_product{
+  width: 100vw;
+}
+
+
+/* ###################################BUY_INDEX############################# */
