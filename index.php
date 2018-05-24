@@ -53,25 +53,27 @@ function submit_otp()
   return false;
 };
 
-
 function req_form_action()
 {
-  var product_name=document.getElementById('product_name').value;
+  var product_name=document.getElementById('pruduct_name').value;
   var quantity=document.getElementById('quantity').value;
   var unit=document.getElementById('unit').value;
   var price=document.getElementById('price').value;
+  var dataString='product_name='+product_name+'&quantity='+quantity+'&unit='+unit+'&price='+price;
   $.ajax({
-    method:"POST",
+    type:"post",
     url:"ajax/sell_product_action.php",
-    data:{product:product_name,quantity:quantity,unit:unit,price:price},
-    cache:false
-  //  success: function(html){
-    //  $('#add_product').html(html);
+    data:dataString,
+    cache:false,
+    success: function(html){
+      $('#add_product').html(html);
 
-  //  }
-  // })
+    }
+  })
+
 return false;
-}
+};
+
 
 
 
