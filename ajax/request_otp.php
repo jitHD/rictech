@@ -85,7 +85,7 @@ if(isset($_POST['number'])) {
     // }*/
   } else {
     echo "User doesnot Exists !!";
-    mysqli_query($conn,"INSERT INTO registered_users(id,name,phone,village,post_office,pin,user_type) VALUES (,'','$phone_number','','','',)") or die(mysqli_error($conn));
+    mysqli_query($conn,"INSERT INTO registered_users(id,name,phone,village,post_office,pin) VALUES (,'','$phone_number','','','')") or die(mysqli_error($conn));
     $_SESSION['new']=1;
     goto j;
   }
