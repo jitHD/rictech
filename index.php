@@ -34,7 +34,7 @@ function req_otp()
     }
   })
   return false;
-}
+};
 
 function submit_otp()
 {
@@ -51,7 +51,7 @@ function submit_otp()
     }
   })
   return false;
-}
+};
 
 
 function req_form_action()
@@ -60,18 +60,17 @@ function req_form_action()
   var quantity=document.getElementById('quantity').value;
   var unit=document.getElementById('unit').value;
   var price=document.getElementById('price').value;
- alert(product_name+"-"+quantity+unit+price);
-//  $.ajax({
-  //  method:"POST",
-  //  url:"ajax/sell_product_action.php",
-  //  data:{product:product_name,quantity:quantity,unit:unit,price:price},
-  //  cache:false
+  $.ajax({
+    method:"POST",
+    url:"ajax/sell_product_action.php",
+    data:{product:product_name,quantity:quantity,unit:unit,price:price},
+    cache:false
   //  success: function(html){
     //  $('#add_product').html(html);
 
   //  }
   // })
-//  return false;
+return false;
 }
 
 
