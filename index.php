@@ -74,17 +74,20 @@ function req_form_action()
 return false;
 };
 
+
 function uploadFile()
 {
-  var product_name=document.getElementById('file_1').value;
-  var quantity=document.getElementById('file_2').value;
-  var unit=document.getElementById('file_3').value;
-  var price=document.getElementById('file_4').value;
+  var product_name=document.getElementById('file_1');
+  var quantity=document.getElementById('file_2');
+  var unit=document.getElementById('file_3');
+  var price=document.getElementById('file_4');
   var dataString='file_1='+product_name+'&file_2='+quantity+'&file_3='+unit+'&file_4='+price;
   $.ajax({
     type:"post",
     url:"upload_files_action.php",
     data:dataString,
+    processData:false,
+    contentType:false,
     cache:false,
     success: function(html){
       $('#add_product').html(html);
@@ -95,7 +98,49 @@ function uploadFile()
 return false;
 };
 
+$(document).ready(function (e) {
+$("#uploadimage").on('submit',(function(e) {
+e.preventDefault();
+$("#message").empty();
+$('#loading').show();
+$.ajax({
+url: "upload_files_action.php", // Url to which the request is send
+type: "POST",             // Type of request to be send, called as method
+data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+contentType: false,       // The content type used when sending data to the server.
+cache: false,             // To unable request pages to be cached
+processData:false,        // To send DOMDocument or non processed data file it is set to false
+success: function(data)   // A function to be called if request succeeds
+{
+$('#loading').hide();
+$("#message").html(data);
+}
+});
+}));
 
+// Function to preview image after validation
+$(function() {
+$("#file").change(function() {
+$("#message").empty(); // To remove the previous error message
+var file = this.files[0];
+var imagefile = file.type;
+var match= ["image/jpeg","image/png","image/jpg"];
+if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2])))
+{
+return false;
+}
+else
+{
+var reader = new FileReader();
+reader.onload = imageIsLoaded;
+reader.readAsDataURL(this.files[0]);
+}
+});
+});
+function imageIsLoaded(e) {
+$("#file").css("color","green");
+};
+});
 </script>
 </head>
   <body>
