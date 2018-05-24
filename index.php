@@ -100,7 +100,7 @@ return false;
 */
 
 $(document).ready(function (e) {
-$("#uploadimage").on('submit',(function(e) {
+$("form#uploadimage").on('submit',(function(e) {
 e.preventDefault();
 
 $.ajax({
