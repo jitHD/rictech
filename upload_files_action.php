@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 <?php
 
 session_start();
 
 $type=$_SESSION['product_type'];
-echo $type;
+//echo $type;
 $name=$_SESSION['product_name'];
-$conn = mysqli_connect("localhost","root","root","buy_sell");
+require_once 'connect.php';
 $product_id= $_SESSION['product_id'];
-echo $product_id;
+//echo $product_id;
 $upload=0;
 
 
@@ -56,12 +55,15 @@ if($upload==4)
 {
  if(mysqli_query($conn,"UPDATE $type SET photo_1='$photo_1', photo_2='$photo_2',photo_3='$photo_3',photo_4='$photo_4' WHERE id = '$product_id'"))
  {
-   echo "upload success";
    unset($_SESSION['product_type']);
    unset($_SESSION['product_name']);
    unset($_SESSION['product_id']);
-
-header("location:sell_index.php");
+?>
+<script>
+loadPage('sell_index.php');
+</script>
+<?php
+//header("location:sell_index.php");
 
 /*
    echo '<pre>';

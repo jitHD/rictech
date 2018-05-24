@@ -10,10 +10,11 @@ $type=$_SESSION['product_type'];
 $_SESSION['product_name']=$_POST['product'];
 
 // echo "<br>";
-
-//$id=$seller.date("YmdHis");
-// echo $id;
 $product_name=$_POST['product'];
+
+$id=$seller.$product_name.date("YmdHis");
+// echo $id;
+
 // echo "<br>".$product_name;
 $quantity=$_POST['quantity'];
 // echo "<br>".$quantity;

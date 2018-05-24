@@ -25,8 +25,8 @@ if(isset($_GET['type']))
 <div class="col-12">
   <!-- <form action="sell_product_action.php" method="post"> -->
   <form id="product_input">
-      <table>
-        <tr><td>Product Name:</td><td> <input id="pruduct_name" type="text"></td></tr>
+      <table align="center">
+        <tr><td>Product Name:</td><td> <input id="product_name" type="text"></td></tr>
         <tr><td>Quantity:</td><td><input id="quantity" type="number" name="quantity" required>
           <select id="unit" name="unit" required>
             <option value="g">Grams</option>
@@ -41,7 +41,7 @@ if(isset($_GET['type']))
       </table>
     </form>
 
-  
+
 </div>
 </body>
 
