@@ -5,20 +5,22 @@ session_start();
 $type=$_SESSION['product_type'];
 //echo $type;
 $name=$_SESSION['product_name'];
-require_once 'connect.php';
 $product_id= $_SESSION['product_id'];
-//echo $product_id;
+//echo "<br>".$product_id;
 $upload=0;
+//echo "<br>".$_FILES['file_1']['name'];
 
 
 $newFileName1 = uniqid($type.'_'.$name.'_', true) . '.' . strtolower(pathinfo($_FILES['file_1']['name'], PATHINFO_EXTENSION));
+//echo "<br>".$newFileName1;
+
 if(move_uploaded_file($_FILES['file_1']['tmp_name'], 'image/market/'.$type.'/'.$newFileName1))
 {
   $photo_1='image/market/'.$type.'/'.$newFileName1;
   $upload=$upload+1;
 }
 else if($upload>0) {
-  echo "first image upload error";
+  //echo "first image upload error";
   $upload=$upload-1;
 }
 
@@ -29,7 +31,7 @@ if(move_uploaded_file($_FILES['file_2']['tmp_name'], 'image/market/'.$type.'/'.$
   $upload=$upload+1;
 }
 else if ($upload>0) {
-  echo "second image upload error";
+  //echo "second image upload error";
   $upload=$upload-1;
 }
 
@@ -40,7 +42,7 @@ if(move_uploaded_file($_FILES['file_3']['tmp_name'], 'image/market/'.$type.'/'.$
   $upload=$upload+1;
 }
 else if ($upload>0) {
-  echo "third image upload error";
+  //echo "third image upload error";
   $upload=$upload-1;
 }
 
@@ -51,19 +53,26 @@ if(move_uploaded_file($_FILES['file_4']['tmp_name'], 'image/market/'.$type.'/'.$
   $upload=$upload+1;
 }
 else if ($upload>0) {
-  echo "fourth image upload error";
+  //echo "fourth image upload error";
   $upload=$upload-1;
 }
 
+//echo "<br>".$upload;
+
+
 if($upload==4)
 {
+  require_once 'connect.php';
+
+
  if(mysqli_query($conn,"UPDATE $type SET photo_1='$photo_1', photo_2='$photo_2',photo_3='$photo_3',photo_4='$photo_4' WHERE id = '$product_id'"))
  {
-   echo "uploaded successfully";
+   echo "sell_index.php";
 
    unset($_SESSION['product_type']);
    unset($_SESSION['product_name']);
    unset($_SESSION['product_id']);
+ /*
 ?>
 <script>
 loadPage('sell_index.php');
@@ -71,11 +80,13 @@ loadPage('sell_index.php');
 <?php
 //header("location:sell_index.php");
 
+*/
 /*
    echo '<pre>';
 var_dump($_SESSION);
 echo '</pre>';
 */
+
  }
  else {
    echo "Database entry failed";
@@ -85,4 +96,5 @@ echo '</pre>';
 else {
   echo "File Upload Failed";
 }
+
 ?>

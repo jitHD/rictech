@@ -123,7 +123,7 @@
   }
 
   </style>
-  
+
 
 </head>
 
@@ -131,7 +131,9 @@
   <div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
   <h4><b>Home</b></h4></div><div class="col-1"></div>
 <!--  <a href="sell_product.php?type=cereals"> -->
+
 <div class="col-12">
+  <?php if(isset($_GET['msg'])) echo "<h4>".$_GET['msg']."</h4>"; ?>
     <div class="containers" onclick="setPresent('sell_index.php');loadPage('sell_product.php?type=cereals');">
       <h3>Cereals</h3>
       <div class="cereals">
