@@ -53,6 +53,29 @@ function submit_otp()
   return false;
 }
 
+
+function req_form_action()
+{
+  var product_name=document.getElementById('product_name').value;
+  var quantity=document.getElementById('quantity').value;
+  var unit=document.getElementById('unit').value;
+  var price=document.getElementById('price').value;
+
+  $.ajax({
+    type:"post",
+    url:"ajax/sell_product_action.php",
+    data:{product:productname,quantity:quantity,unit:unit,price:price},
+    cache:false,
+    success: function(html){
+      $('#msg').html(html);
+
+    }
+  })
+  return false;
+}
+
+
+
 </script>
 </head>
   <body>
