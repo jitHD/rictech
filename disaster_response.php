@@ -22,7 +22,8 @@
 
 
 
-          <tr><th>Fire Brigade</th><th>Phone Number</th></tr>
+          <tr><td>Udalguri Fire Station</td><td>98597-91345, 03711-224959</td></tr>
+          <tr><td>Tangla Fire Station</td><td>96132-55238, 03711- 255495
           <tr><td>Panbazar Fire Brigade</td><td class="t_center">0361-2540222</td></tr>
           <tr><td>Dispur Fire Brigade</td><td class="t_center">0361-2260221</td></tr>
         </table>
@@ -31,7 +32,7 @@
       <div class="col-6 t_white t_center">
 
         <table align="center">
-          <tr><th>Ambulance.</th><th>Phone Number</th></tr>
+          <tr><th>Ambulance</th><th>Phone Number</th></tr>
           <tr><td>G. L. P. Publicationr</td><td class="t_center">0361-2544357</td></tr>
           <tr><td>Marowary Yuva Manch</td><td class="t_center">0361-2542074 / 2547251</td></tr>
           <tr><td>Lion’s Club</td><td class="t_center">0361-2545220</td></tr>
