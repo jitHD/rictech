@@ -69,7 +69,7 @@ function req_form_action()
     //  $('#add_product').html(html);
 
   //  }
-  // })
+  })
 return false;
 }
 
