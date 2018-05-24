@@ -13,7 +13,7 @@
       </div>
       <div class="col-1 empty"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3 empty"></div><div class="col-2 empty" ></div><div class="col-3 empty"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
       <h4><b>Home</b></h4></div><div class="col-1 empty"></div>
-      <div class="col-12"><h2 align="center" style="color:red;">Udalguri Emergency Response: (03711)224433/224281</h2></div>
+      <div class="col-12"><h2 align="center"><a href="http://onlineasdma.assam.gov.in/" style="text-decoration:none; color:red;">Assam State Disaster Management Authority GIS</a></h2></div>
       <div class="col-6 t_white t_center" >
 
         <table align="center">
