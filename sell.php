@@ -1,12 +1,13 @@
 <?php
 require_once './connect.php';
+/*
 session_start();
 if(!isset($_SESSION['user']))
 {
   header("Location: design_login.php?ori_log=buy_sell.php");
   die();
 }else{
-
+*/
   ?>
 
   <head>
@@ -37,7 +38,8 @@ if(!isset($_SESSION['user']))
           <form id="submit_otp" style="display:none">
              <table>
             <tr><td>Enter OTP: </td><td><input type="text" id="ip_otp" placeholder="OTP"></td></tr>
-            <tr><td colspan="2"><input type="submit" value="submit" onclick="return submit_otp();">&nbsp;<input type="reset" value="Reset"><p style="color:Red;font-size:30px;" id="otp_msg"></p></td></tr>
+            <tr><td colspan="2"><input type="submit" value="submit" onclick="return submit_otp();">&nbsp;<input type="reset" value="Reset">
+              <p style="color:Red;font-size:30px;" id="otp_msg"></p></td></tr>
           </table>
           </form>
 
@@ -45,7 +47,8 @@ if(!isset($_SESSION['user']))
      <form id="req_otp">
        <table>
          <tr><td>Phone:</td><td> <input type="text" id="number"></td></tr>
-         <tr><td colspan="2"><input type="submit" value="submit" onclick="return req_otp();">&nbsp;<input type="reset" value="Reset"><p style="color:Red;font-size:30px;" id="msg"></p></td></tr>
+         <tr><td colspan="2"><input type="submit" value="submit" onclick="return req_otp();">&nbsp;<input type="reset" value="Reset">
+           <p style="color:Red;font-size:30px;" id="msg"></p></td></tr>
          <tr></tr>
        </table>
      </form>
@@ -59,4 +62,4 @@ if(!isset($_SESSION['user']))
   </body>
 </html>
 
-<?php } ?>
+<?php // } ?>
