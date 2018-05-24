@@ -3,18 +3,18 @@ require_once '../connect.php';
 $phone=$_POST['number'];
 $success = "";
 $error_message = "";
-
+session_start();
 
 if(isset($_POST['number'])) {
 
   $phone_number="91".$_POST['number'];
 
+  j:
   $result = mysqli_query($conn,"SELECT * FROM registered_users WHERE phone='" . $phone . "'") or die(mysqli_error($conn));
   $count  = mysqli_num_rows($result);
 
   if($count>0) {
     // generate OTP
-    //$otp = rand(100000,999999);
     $otp="";
     for(;strlen($otp)<5;)
     {
@@ -27,7 +27,6 @@ if(isset($_POST['number'])) {
       goto i;
     }
 
-    //NOT WORKING ## $result = mysqli_query($conn,"IF EXISTS(SELECT * FROM otp_expiry WHERE phone=$phone_number) THEN UPDATE otp_expiry SET is_expired=0 AND created_at = NOW() AND expiring_at = DATE_ADD(NOW(), INTERVAL 1 MINUTE) AND otp = $otp WHERE phone=$phone_number; ELSE INSERT INTO otp_expiry(otp,phone,is_expired,created_at,expiring_at) VALUES ('$otp','$phone_number',0,'NOW()',DATE_ADD(NOW(), INTERVAL 1 MINUTE)); END IF") or die(mysqli_error($conn));
     $result = mysqli_query($conn,"SELECT * FROM otp_expiry WHERE phone='$phone_number'") or die(mysqli_error($conn));
     $exists = mysqli_num_rows($result);
 
@@ -86,7 +85,9 @@ if(isset($_POST['number'])) {
     // }*/
   } else {
     echo "User doesnot Exists !!";
-    
+    mysqli_query($conn,"INSERT INTO registered_users(id,name,phone,village,post_office,pin,user_type) VALUES ('','','$phone_number','','','',''") or die(mysqli_error($conn));
+    $_SESSION['new']=1;
+    goto j;
   }
 }
 
