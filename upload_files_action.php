@@ -70,8 +70,6 @@ loadPage('sell_index.php');
 var_dump($_SESSION);
 echo '</pre>';
 */
-
-
  }
  else {
    echo "Database entry failed";
