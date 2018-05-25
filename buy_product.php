@@ -11,7 +11,7 @@ $data=mysqli_query($conn,"SELECT * FROM $product_type ORDER BY add_date DESC") o
 <h4><b>Home</b></h4></div><div class="col-1"></div>
 <div class="col-12">
 <?php
-echo "<table class='buy_product'>";
+echo "<table style='max-width:100vw;'>";
 while($data1=mysqli_fetch_array($data))
 {
   echo "<tr><td><h3>".$data1['product_name']."</h3></td><td><h3> Total:".$data1['quantity'].$data1['unit']."</h3></td><td><h3>Rs.".$data1['price']." per ".$data1['unit']."</h3></td><td><button onclick='confirmBuy(this.value);' value='".$data1['id']."'>Buy</button></td></tr>";

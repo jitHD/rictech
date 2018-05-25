@@ -207,7 +207,11 @@ div .table-title {
   animation: float 5s infinite;
 }
 
-th .old{
+.schemes_table .nearby_hospitals{
+  table-layout:fixed; width:100%;
+}
+
+.schemes_table .nearby_hospitals th{
   color:#D5DDE5;;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
@@ -229,7 +233,7 @@ th:last-child {
   border-right:none;
 }
 
-tr .old{
+.schemes_table .nearby_hospitals tr {
   border-top: 1px solid #C1C3D1;
   border-bottom-: 1px solid #C1C3D1;
   /*width: 800px;*/
@@ -269,7 +273,20 @@ tr:last-child td:last-child {
   border-bottom-right-radius:3px;
 }
 
-td .old{
+.nearby_hospital_input {
+  border: 0;
+border-bottom: 2px solid #1976D2;
+width: 100%;
+font-size: 30px;
+line-height: 35px;
+height: 70px;
+text-align: center;
+padding: 10px;
+background: transparent;
+ color: #BBDEFB;
+}
+
+.schemes_table .nearby_hospitals td {
   background:#FFFFFF;
   padding:20px;
   text-align:left;
