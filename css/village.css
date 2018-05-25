@@ -75,7 +75,9 @@ img{
 
 /* ------------------------------ Screen End -------------------------- */
 
-
+.weather{
+  background-color: #ffffff;
+}
 
 .phone{
   width: 10%;
