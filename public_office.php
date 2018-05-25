@@ -28,7 +28,7 @@
         <div class="col-12 t_center t_white">
           <br />
 
-          <table style='table-layout:fixed; width:100%;'>
+          <table class="schemes_table">
             <thead>
               <tr>
                 <th class="text-left">Scheme <br><input type="text" name="scheme" id="scheme" onkeyup="loadscheme('scheme');"></th>
