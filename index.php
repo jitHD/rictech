@@ -13,9 +13,10 @@ if(!isset($_SESSION['user']))
 <head>
 <title>RICTech</title>
 
+<link  type="text/css" href="css/main.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="./css/village.css">
+<link rel="stylesheet" type="text/css" href="css/village.css">
 <script src="./js/ajax.js" type="text/jscript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -90,51 +91,94 @@ function req_form_action()
 return false;
 };
 
-/*
+
 function uploadFile()
 {
-  var product_name=document.getElementById('file_1');
-  var quantity=document.getElementById('file_2');
-  var unit=document.getElementById('file_3');
-  var price=document.getElementById('file_4');
-  var dataString='file_1='+product_name+'&file_2='+quantity+'&file_3='+unit+'&file_4='+price;
+
+  var form_data = new FormData();
+  form_data.append("file_1", document.getElementById('file_1').files[0]);
+alert("oiiiiii");
   $.ajax({
-    type:"post",
+    type:"POST",
     url:"upload_files_action.php",
-    data:dataString,
+    data:form_data,
     processData:false,
     contentType:false,
     cache:false,
-    success: function(html){
-      $('#add_product').html(html);
-
+    processData: false,
+    beforeSend:function(){
+     $('#uploaded_image').html("<label class='text-success'>Image Uploading...</label>");
+    },
+    success:function(data)
+    {
+     $('#uploaded_image').html(data);
     }
   })
 
 return false;
 };
-*/
+
 //############################ UPLOADING FILES #################################
-function uploadFile(){
-var upload = document.getElementById('uploadimage');
-$.ajax({
-url: "upload_files_action.php", // Url to which the request is send
-type: "post",             // Type of request to be send, called as method
-enctype: 'multipart/form-data',
-data: new FormData(upload), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
-contentType: false,       // The content type used when sending data to the server.
-cache: false,             // To unable request pages to be cached
-processData:false,        // To send DOMDocument or non processed data file it is set to false
-success: function(data)   // A function to be called if request succeeds
-{
-$("#page").load(data);
-}
-});
-return false;
-};
+// function uploadFile(){
+// var upload = document.getElementById('uploadimage');
+// $.ajax({
+// url: "upload_files_action.php", // Url to which the request is send
+// type: "post",             // Type of request to be send, called as method
+// enctype: 'multipart/form-data',
+// data: new FormData(upload), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+// contentType: false,       // The content type used when sending data to the server.
+// cache: false,             // To unable request pages to be cached
+// processData:false,        // To send DOMDocument or non processed data file it is set to false
+// success: function(data)   // A function to be called if request succeeds
+// {
+// $("#page").load(data);
+// }
+// });
+// return false;
+// };
 
-
-
+//
+// $(document).ready(function(e){
+//     $("#fupForm").on('submit', function(e){
+//       alert("ahilu");
+//         e.preventDefault();
+//         $.ajax({
+//             type: 'POST',
+//             url: 'upload_files_action.php',
+//             data: new FormData(this),
+//             contentType: false,
+//             cache: false,
+//             processData:false,
+//             beforeSend: function(){
+//                 $('.submitBtn').attr("disabled","disabled");
+//                 $('#fupForm').css("opacity",".5");
+//             },
+//             success: function(msg){
+//                 $('.statusMsg').html('');
+//                 if(msg == 'ok'){
+//                     $('#fupForm')[0].reset();
+//                     $('.statusMsg').html('<span style="font-size:18px;color:#34A853">Form data submitted successfully.</span>');
+//                 }else{
+//                     $('.statusMsg').html('<span style="font-size:18px;color:#EA4335">Some problem occurred, please try again.</span>');
+//                 }
+//                 $('#fupForm').css("opacity","");
+//                 $(".submitBtn").removeAttr("disabled");
+//             }
+//         });
+//     });
+//
+//     //file type validation
+//     $("#file").change(function() {
+//         var file = this.files[0];
+//         var imagefile = file.type;
+//         var match= ["image/jpeg","image/png","image/jpg"];
+//         if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+//             alert('Please select a valid image file (JPEG/JPG/PNG).');
+//             $("#file").val('');
+//             return false;
+//         }
+//     });
+// });
 </script>
 </head>
   <body>
