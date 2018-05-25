@@ -7,7 +7,7 @@
   </head>
   <body>
       <div class="col-12 t_center t_white heading" >
-        <h1>RICTech: Disaster Recovery</h1>
+        <h1>RICTech: Disaster Mitigation</h1>
 
 
       </div>
