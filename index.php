@@ -19,6 +19,20 @@ if(!isset($_SESSION['user']))
 <script src="./js/ajax.js" type="text/jscript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+
+function loadPage(page_name){
+  var page=page_name;
+  $.ajax({
+    type:'get',
+    url:page,
+    cache:false,
+    success:function(data){
+      $('#page').html(data);
+    }
+  })
+  return false;
+};
+
 function req_otp()
 {
   var number=document.getElementById('number').value;
@@ -53,6 +67,8 @@ function submit_otp()
   return false;
 };
 
+
+
 function req_form_action()
 {
   var product_name=document.getElementById('product_name').value;
@@ -74,7 +90,7 @@ function req_form_action()
 return false;
 };
 
-
+/*
 function uploadFile()
 {
 <<<<<<< HEAD
@@ -115,50 +131,28 @@ function uploadFile()
 
 return false;
 };
-
-$(document).ready(function (e) {
-$("#uploadimage").on('submit',(function(e) {
-e.preventDefault();
-$("#message").empty();
-$('#loading').show();
+*/
+//############################ UPLOADING FILES #################################
+function uploadFile(){
+var upload = document.getElementById('uploadimage');
 $.ajax({
 url: "upload_files_action.php", // Url to which the request is send
-type: "POST",             // Type of request to be send, called as method
-data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+type: "post",             // Type of request to be send, called as method
+enctype: 'multipart/form-data',
+data: new FormData(upload), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
 contentType: false,       // The content type used when sending data to the server.
 cache: false,             // To unable request pages to be cached
 processData:false,        // To send DOMDocument or non processed data file it is set to false
 success: function(data)   // A function to be called if request succeeds
 {
-$('#loading').hide();
-$("#message").html(data);
+$("#page").load(data);
 }
 });
-}));
-
-// Function to preview image after validation
-$(function() {
-$("#file").change(function() {
-$("#message").empty(); // To remove the previous error message
-var file = this.files[0];
-var imagefile = file.type;
-var match= ["image/jpeg","image/png","image/jpg"];
-if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2])))
-{
 return false;
-}
-else
-{
-var reader = new FileReader();
-reader.onload = imageIsLoaded;
-reader.readAsDataURL(this.files[0]);
-}
-});
-});
-function imageIsLoaded(e) {
-$("#file").css("color","green");
 };
-});
+
+
+
 </script>
 </head>
   <body>
@@ -171,7 +165,7 @@ $("#file").css("color","green");
         <h4>Village Information and Communication Technology</h4>
 
       </div>
-
+      <div class="col-12">
       <!--What is RICTech -->
         <div class="col-6 what">
 
@@ -191,6 +185,7 @@ $("#file").css("color","green");
           <p>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;</p>
         </div>
     </div>
+  </div>
       <div class="col-5 empty"></div>
       <div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5 empty"></div>
     </div>
