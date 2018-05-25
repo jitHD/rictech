@@ -34,13 +34,13 @@ if(!isset($_SESSION['user']))
       </div>
 
 
-      <div class="col-6 blue t_center t_white" onclick="setPresent('');loadPage('')" style="min-height:40vh">
+      <div class="col-6 blue t_center t_white" onclick="setPresent('disaster_helpline.php');loadPage('disaster_mitigation.php')" style="min-height:40vh">
             <h2>MITIGATION</h2>
         <!--  <img id="ailments" src="image/#.png"> -->
 
       </div>
 
-      <div class="col-6 green t_center t_white" onclick="setPresent('');loadPage('')" style="min-height:40vh">
+      <div class="col-6 green t_center t_white" onclick="setPresent('disaster_helpline.php');loadPage('disaster_preparation.php')" style="min-height:40vh">
           <h2>PREPARATION</h2>
         <!--  <img id="practices" src="image/#.png"> -->
         </div>

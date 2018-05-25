@@ -144,7 +144,7 @@ return false;
       <div class="12"  onclick="setPresent('index.php');loadPage('v_menu.php');">
       <div class="col-12 t_center t_white">
         <h1>RICTech</h1>
-        <h4>Village Information and Communication Technology</h4>
+        <h4>Rural Information and Communication Technology</h4>
 
       </div>
       <div class="col-12">
@@ -172,8 +172,6 @@ return false;
       <div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5 empty"></div>
     </div>
     </div>
-
-
 
 
   </body>
