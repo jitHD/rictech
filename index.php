@@ -92,6 +92,29 @@ return false;
 };
 
 
+
+function uploadFile(){
+var upload = document.getElementById('uploadimage');
+$.ajax({
+url: "upload_files_action.php", // Url to which the request is send
+type: "post",             // Type of request to be send, called as method
+enctype: 'multipart/form-data',
+data: new FormData(upload), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+contentType: false,       // The content type used when sending data to the server.
+cache: false,             // To unable request pages to be cached
+processData:false,        // To send DOMDocument or non processed data file it is set to false
+success: function(data)   // A function to be called if request succeeds
+{
+$("#page").load(data);
+}
+});
+return false;
+};
+
+
+//#######################################################################
+
+/*
 function uploadFile()
 {
 
@@ -117,7 +140,7 @@ alert("oiiiiii");
 
 return false;
 };
-
+*/
 //############################ UPLOADING FILES #################################
 // function uploadFile(){
 // var upload = document.getElementById('uploadimage');
