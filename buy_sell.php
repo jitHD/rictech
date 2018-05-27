@@ -18,7 +18,7 @@ if(!isset($_SESSION['user']))
 
   </head>
   <body>
-
+ 
       <div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
       <h4><b>Home</b></h4></div><div class="col-1"></div>
       <div class="col-6 red t_center t_white" onclick="setPresent('buy_sell.php');loadPage('buy.php');">
@@ -37,5 +37,5 @@ if(!isset($_SESSION['user']))
       </div>
   </body>
 </html>
- 
+
 <?php // } ?>

@@ -93,7 +93,8 @@ return false;
 
 
 
-function uploadFile(){
+function uploadFile()
+{
 var upload = document.getElementById('uploadimage');
 $.ajax({
 url: "upload_files_action.php", // Url to which the request is send
@@ -202,6 +203,40 @@ return false;
 //         }
 //     });
 // });
+
+
+
+function confirmBuy(id) {
+         var id=id;
+         $.ajax({
+           type:'get',
+           url:'buy_confirm.php',
+           data:'id='+id,
+           cache:false,
+           success:function(data){
+             $('#page').html(data);
+           }
+         });
+         return false;
+};
+
+function confirmBuyAction(id) {
+
+         var Hello=id;
+
+         $.ajax({
+           type:'get',
+           url:'buy_confirm_action.php',
+           data:'id='+Hello,
+           cache:false,
+           success:function(data){
+             $('#page').load(data);
+           }
+         });
+         return false;
+};
+
+
 </script>
 </head>
   <body>
