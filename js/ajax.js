@@ -28,19 +28,20 @@ function goBack(){
 };
 
 /* ------------------------- Hospital Functions ------------------------- */
-function loadhospital()
+function loadhospital(val)
 {
+  var val=val;
+  var load_value=document.getElementById(val).value;
 
-var pin=document.getElementById("pin_code").value;
-load_data(pin);
+load_data(val,load_value);
 
-function load_data(pin_code)
+function load_data(val,load_value)
  {
 
   $.ajax({
    url:"./js/loadhospital.php",
    method:"POST",
-   data:{pin_code:pin_code},
+   data:{val:val,input_val:load_value},
    success:function(data)
    {
     $('#display_info').html(data);
@@ -51,19 +52,20 @@ function load_data(pin_code)
 };
 
 /* ------------------------ Hospital Load Sickness ------------------ */
-function loadsickness()
+function loadsickness(val)
 {
+var id=val
+var input_value=document.getElementById(id).value;
 
-var symptoms=document.getElementById("symptom").value;
-load_data(symptoms);
+load_data(id,input_value);
 
-function load_data(symptoms)
+function load_data(id,input_value)
  {
 
   $.ajax({
    url:"./js/loadsickness.php",
    method:"POST",
-   data:{symptoms:symptoms},
+   data:{id:id,input_val:input_value},
    success:function(data)
    {
     $('#sickness_info').html(data);

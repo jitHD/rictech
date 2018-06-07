@@ -26,16 +26,16 @@ if(isset($_GET['type']))
   <!-- <form action="sell_product_action.php" method="post"> -->
   <form id="product_input">
       <table align="center">
-        <tr><td>Product Name:</td><td> <input id="product_name" type="text"></td></tr>
-        <tr><td>Quantity:</td><td><input id="quantity" type="number" name="quantity" required>
-          <select id="unit" name="unit" required>
+        <tr><td>Product Name:</td><td> <input id="product_name" placeholder="Name of Product" type="text" required></td></tr>
+        <tr><td>Quantity:</td><td><input id="quantity" placeholder="Quantity" type="number" name="quantity" required>
+          <select id="unit" type='select' name="unit" required>
             <option value="g">Grams</option>
             <option value="Kg">Kilograms</option>
             <option value="P">Piece</option>
           </select>
           </td></tr>
-        <tr><td>Price per quantity: </td><td><input id="price" type="float" name="price"></td></tr>
-        <tr><td colspan="2"><input type="submit" value="submit" onclick="return req_form_action();">&nbsp;<input type="reset" value="Reset">
+        <tr><td>Price per quantity: </td><td><input id="price" placeholder="Rupees" type="float" name="price" required></td></tr>
+        <tr><td colspan="2"><input type="submit" value="Submit" onclick="return req_form_action();">&nbsp;<input type="reset" value="Reset">
           <p style="color:Red;font-size:30px;" id="add_product"></p></td></tr>
         <tr></tr>
       </table>

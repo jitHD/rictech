@@ -8,19 +8,6 @@
 <head>
 
   <style>
-  * {
-    box-sizing: border-box;
-  }
-  body{
-    background: #383637;
-    height:100vh;
-    color: #ffffff;
-  }
-
-  a{
-    text-decoration: none;
-    color: #ffffff;
-  }
 
   .containers{
       width:100%;
@@ -112,10 +99,8 @@
     .containers{
       width:33.33%;
     }
-    .cereals{
-      background-image: url('image/market/sample1.png');
 
-    }
+
   }
 
   .items{
@@ -128,9 +113,16 @@
 </head>
 
 <body>
-  <div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
-  <h4><b>Home</b></h4></div><div class="col-1"></div>
-<!--  <a href="sell_product.php?type=cereals"> -->
+  <div class="col-12 index">
+    <h1>RICTech: Sell</h1>
+  </div>
+  <div class="col-1 empty"></div>
+  <div class="col-1 button button1" onclick="goBack();"><h4><b>Back</b></h4></div>
+  <div class="col-3 empty"></div>
+  <div class="col-2 empty"></div>
+  <div class="col-3 empty"></div>
+  <div class="col-1 button button1" onclick="loadPage('index.php')"><h4><b>Home</b></h4></div>
+  <div class="col-1 empty"></div>
 
 <div class="col-12">
   <?php if(isset($_GET['msg'])) echo "<h4>".$_GET['msg']."</h4>"; ?>

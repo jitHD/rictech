@@ -1,52 +1,26 @@
-<?php
 
-
-?>
-
-<head>
-<title>Schemes</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="./css/village.css">
-<script src="./js/ajax.js" type="text/jscript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  </head>
-  <body>
-    <!--  <div class="col-12 t_center t_white heading" >
-        <h1>RICTech</h1>
-        <h4>Village Information and Communication Technology</h4>
-
-      </div>
-    -->
-
-        <div class="col-1"></div>
-        <div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div>
-        <div class="col-3"></div>
-        <div class="col-2" ></div>
-        <div class="col-3"></div>
-        <div class="col-1 button t_center" onclick="loadPage('index.php')"><h4><b>Home</b></h4></div><div class="col-1"></div>
-        <div class="col-12 t_center t_white">
+        <div class="col-1 empty"></div>
+        <div class="col-1 button button1" onclick="goBack();"><h4><b>Back</b></h4></div>
+        <div class="col-3 empty"></div>
+        <div class="col-2 empty" ></div>
+        <div class="col-3 empty"></div>
+        <div class="col-1 button button1" onclick="loadPage('index.php')"><h4><b>Home</b></h4></div><div class="col-1"></div>
+        <div class="col-12 schemes">
           <br />
 
-
-
-                      <table class="darkTable">
+                      <table id="schemes">
                         <thead>
-                          <tr>
-                            <th >Scheme <br><input type="text" name="scheme" id="scheme" onkeyup="loadscheme('scheme');"></th>
-                            <th>Ministry <br><input type="text" name="ministry" id="ministry" onkeyup="loadscheme('ministry');"></th>
-                            <th >Sector <br><input type="text" name="sector" id="sector" onkeyup="loadscheme('sector');"></th>
-                            <th >Provision <br><input type="text" name="provision" id="provision" onkeyup="loadscheme('provision');"></th>
-                          </tr>
+
+                            <th id="scheme1"><center>Scheme</center> <br><input type="text" name="scheme" id="scheme" placeholder='Scheme Name' onkeyup="loadscheme('scheme');"></th>
+                            <th id="shceme2"><center>Ministry</center> <br><input type="text" name="ministry" id="ministry" placeholder="Ministry" onkeyup="loadscheme('ministry');"></th>
+                            <th id="scheme3"><center>Sector</center> <br><input type="text" name="sector" id="sector" placeholder="Sector" onkeyup="loadscheme('sector');"></th>
+                            <th id="scheme4"><center>Provision</center> <br><input type="text" name="provision" id="provision" placeholder="Provison" onkeyup="loadscheme('provision');"></th>
+
                         </thead>
                         <tbody id="schemes_info">
 
+
                         </tbody>
                       </table>
-                    </div>
 
-
-
-  </body>
-</html>
+        </div>

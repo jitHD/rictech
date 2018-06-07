@@ -1,0 +1,564 @@
+/*########COLUMNS#########*/
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.empty{
+    display:inline-block;
+}
+/*########COLUMNS End*/
+
+/*##############BUTTON################*/
+.button_index {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 12px;
+    padding: 16px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px #918181;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 12px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*#############BUTTON End*/
+
+
+/*###############Index Page#########################*/
+#close {
+   line-height: 12px;
+   width: 25px;
+   font-size: 8pt;
+   font-family: tahoma;
+   margin-top: 1px;
+   margin-right: 2px;
+   position:absolute;
+   top:0;
+   right:0;
+}
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.index h1,h4{
+  text-shadow:  2px 2px 8px #918181;
+  text-align: center;
+}
+#left,#right {
+  padding:1vw;
+  text-align: justify;
+  text-indent: 1.2em;
+  min-height: 50vh;
+  max-height: 50vh;
+  float: left;
+  display: inline;
+  box-shadow: 2px 2px 8px #918181;
+}
+#left>h3,#right>h3 {
+  text-align: center;
+}
+#left {
+  border-radius: 10px 0px 0px 10px;
+  background-color: #43cd4d;
+}
+#right {
+  border-radius: 0px 10px 10px 0px;
+  background-color: #3dbea1;
+}
+
+
+/*##########Index Page End*/
+
+/*##########V_Menu Page #########################*/
+
+.v_menu {
+  float: left;
+  display: inline;
+  border: 2px solid #918181;
+  border-radius: 15px;
+  background-color: #431f4d;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  max-height: 33.33vh;
+  max-width: 33.33vw;
+  color: #ffffff;
+}
+.v_menu:hover{
+  background-color: #7a3072;
+  color:#ffffff;
+}
+.v_menu img{
+  height: 60%;
+  max-width:90%;
+  margin:auto 5%;
+}
+.v_menu h1 {
+  text-align: center;
+}
+/*#############V_Menu Page End*/
+
+/*##########Schemes Page ##########################*/
+#scheme1 {
+  width: 40%;
+  padding-left: 50px;
+}
+#scheme4{
+  padding-right:50px;
+}
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit],input[type=reset] {
+  padding:12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #0080a0;
+  width: 10vw;
+  float:left;
+}
+.schemes table thead th {
+  text-align: left;
+}
+.schemes {
+  background-color: #c7cfcf;
+  overflow: auto;
+}
+.schemes a {
+  text-decoration: none;
+}
+.schemes table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+.schemes th, .schemes td {
+    text-align: left;
+    padding: 8px;
+}
+.schemes tbody tr{
+  border: 1px solid black;
+}
+.schemes tbody tr:hover {
+  background-color:#acddfd;
+}
+
+
+/*##################Schemes Page End*/
+
+/*##################Hospital Page #################*/
+.hospital_index {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding:0% 5% 0% 5%;
+}
+.left,.right {
+  float: left;
+  display: inline;
+  align-content: center;
+
+}
+.h_index {
+  text-align: center;
+  border: 2px solid #918181;
+  border-radius: 15px;
+  background-color: #431f4d;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  height: 35vh;
+  width: 40vw;
+  color: #ffffff;
+}
+.h_index:hover {
+  background-color: #7a3072;
+  color:#ffffff;
+}
+.h_index img {
+  max-width: 70%;
+  max-height: 60%;
+  margin: auto 15%;
+}
+
+/*#################Hospital Page End*/
+
+/*################ NEARBY HOSPITALS Page ###########*/
+
+.near_hospitals table {
+  border-collapse:collapse;
+  width: 100%;
+}
+#h_name,#h_address {
+  width: 40%;
+}
+#show_name{
+  padding-left: 50px;
+  padding-right:10px;
+}
+#show_phone,#show_address {
+  padding: 10px;
+}
+#show_pin {
+  padding-left: 10px;
+  padding-right: 50px;
+}
+.near_hospitals tbody tr {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.near_hospitals tbody tr:hover {
+  background-color:#acddfd;
+}
+
+/*################# NEARBY HOSPITALS Page End*/
+
+/*################# COMMON AILMENTS Page ###########*/
+.common_ailments table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.common_ailments table tr td {
+  border: 1px solid #000000;
+}
+#sickness_h {
+  width: 15vw;
+}
+#sickness {
+  width:15vw;
+  padding-left: 50px;
+}
+#symptoms_h,#symptoms {
+  width:30vw;
+  padding:10px;
+}
+#best_practice_h, #best_practice {
+  padding:10px 50px 10px 10px;
+  text-align: justify;
+  text-indent: 10px;
+}
+.common_ailments tbody tr {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.common_ailments tbody tr:hover {
+  background-color: #acddfd;
+}
+
+/*################## COMMON AILMENTS Page End*/
+
+/*################## AMBULANCE REQUEST Page ###############*/
+.ambulance {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.ambulance table {
+  text-align: center;
+  width: 90%;
+  min-height: 50vh;
+  background-color: #d5dbdd;
+  margin-left: 10%;
+}
+.ambulance table th{
+  font-size: 1.5em;
+  background-color: #caf2fc;
+}
+.ambulance table tr td {
+  font-size: 1.3em;
+}
+.ambulance table tr {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.ambulance table tr:hover {
+  background-color: #caf2fc;
+}
+#am_pic,#am_no {
+  float: left;
+  display: inline;
+  text-align: left;
+  font-size: 3em;
+}
+.ambulance h1,.ambulance h2 {
+  text-align:center;
+}
+.ambulance img {
+  max-height:30vh;
+  float: right;
+}
+
+/*################## AMBULANCE REQUEST Page End*/
+
+/*################## OFFICIALS' DIRECTORY PAGE ############*/
+
+.official_directory table {
+  width: 90%;
+  align:center;
+  text-align: center;
+}
+#name,#o_name,#ministry,#o_office,#designation,#o_designation,#sector,#o_area,#o_phone {
+  width:20vw;
+}
+.official_directory table tbody tr {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.official_directory table tbody tr:hover {
+  background-color: #caf2fc;
+}
+
+/*#################### OFFICIALS' DIRECTORY Page End*/
+
+/*#################### Disaster Helpline Page ##############*/
+.disaster {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding:0% 5% 0% 5%;
+}
+.d_help {
+  text-align: center;
+  border: 2px solid #918181;
+  border-radius: 15px;
+  background-color: #431f4d;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  height: 35vh;
+  width: 40vw;
+  color: #ffffff;
+}
+.d_help:hover {
+  background-color: #7a3072;
+  color:#ffffff;
+}
+.d_help img {
+  max-width: 70%;
+  max-height: 60%;
+  margin: auto 15%;
+}
+
+/*##################### Disaster Helpline Page End */
+
+/*##################### Disaster Response Page ########################*/
+#response1,#response2 {
+  width: 100%;
+  font-size: 1.5vw;
+  min-height:70vh;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border: 1px solid #000000;
+}
+#response1 tr,#response2 tr {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#response1 tr td,#response2 tr td {
+  border: 1px solid #000000;
+  padding: 0% 5% 0% 5%;
+}
+#response1 tr:hover,#response2 tr:hover {
+  background-color: #caf2fc;
+}
+.disclaimer {
+  text-align: center;
+}
+
+/*###################### Disaster Response Page End */
+
+/*###################### Disaster Mitigation Page ####################*/
+
+#mitigation1,#mitigation2 {
+  width: 100%;
+  font-size: 1.1vw;
+  min-height:70vh;
+  border: 1px solid #000000;
+}
+#mitigation1 tr td,#mitigation2 tr td {
+  border: 1px dotted #000000;
+}
+#mitigation1 tr,#mitigation2 tr {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#mitigation1 tr:hover,#mitigation2 tr:hover {
+  background-color: #caf2fc;
+  font-weight: bold;
+}
+
+/*####################### Disaster Mitigation Page End */
+
+/*####################### Disaster Recovery Page ####################*/
+#recovery1,#recovery2 {
+  width: 100%;
+  font-size: 1.1vw;
+  min-height:70vh;
+  border: 1px solid #000000;
+}
+#recovery1 tr td,#recovery2 tr td {
+  border: 1px dotted #000000;
+}
+#recovery1 tr,#recovery2 tr {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#recovery1 tr:hover,#recovery2 tr:hover {
+  background-color: #caf2fc;
+  font-weight: bold;
+}
+
+/*######################## Disaster Recovery Page End*/
+
+/*######################## Buy & Sell Page ################ */
+#buy_sell1,#buy_sell2 {
+  text-align: center;
+  width: 100%;
+  min-height: 70vh;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#buy_sell1 {
+  background-color: #85e6fe;
+}
+#buy_sell2 {
+  background-color: #d5fe85;
+}
+#buy_sell1:hover,#buy_sell2:hover {
+  background-color: #caf2fc;
+}
+
+/*####################### Buy & Sell Page End*/
+
+/*####################### Buy Page ##############*/
+#buy1 h3,#buy2 h3 {
+margin:12px;
+}
+
+
+/*####################### Buy Page End*/
+
+/*####################### Buy Index Page ####################*/
+
+/*####################### Buy Index Page End*/
+
+/*####################### Buy Product Page ##################*/
+#buy_product {
+  text-align: center;
+}
+.buy_product img{
+  width: 20vw;
+  max-height: 20vh;
+}
+#buy {
+  width: 5vw;
+  height: 5vh;
+  border-radius: 5px;
+}
+
+/*####################### Buy Product Page End*/
+
+/*####################### Confirm Buy Page ##################*/
+#buy_confirm img {
+  width:20vw;
+  max-height:20vh;
+}
+
+/*####################### Confirm Buy Page End*/
+
+/*####################### Buy Sell Status Page ###############*/
+.buy_sell_status img {
+  width: 20vw;
+  max-height: 20vh;
+}
+#sell_status,#buy_status {
+  text-align: center;
+}
+
+/*####################### Buy Sell Status Page End*/
+
+/*####################### Sell Product Page #################*/
+#quantity {
+  width: 50%;
+}
+input[type=select] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=float] {
+  width:100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*######################### Sell Product Page End*/
+
+/*######################### Upload File Page ##############*/
+#uploadimage input[type=button] {
+  width:100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*######################### Upload File Page End*/
+
+/*######################### Agriculture Page #################*/
+.agriculture {
+  align-items: center;
+}
+.agriculture a {
+  text-decoration: none;
+}

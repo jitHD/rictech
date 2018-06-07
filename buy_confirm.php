@@ -9,11 +9,16 @@ require_once 'connect.php';
 
 $data=mysqli_query($conn,"SELECT * FROM $product_type WHERE id='$product_id'") or die(mysqli_error($conn));
 ?>
-<div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
-<h4><b>Home</b></h4></div><div class="col-1"></div>
+<div class="col-1 empty"></div>
+<div class="col-1 button button1" onclick="goBack();"><h4><b>Back</b></h4></div>
+<div class="col-3 empty"></div>
+<div class="col-2 empty"></div>
+<div class="col-3 empty"></div>
+<div class="col-1 button button1" onclick="loadPage('index.php')"><h4><b>Home</b></h4></div>
+<div class="col-1 empty"></div>
 <div class="col-12">
 <?php
-echo "<table id='buy_confirm'>";
+echo "<table id='buy_confirm' align='center'>";
 while($data1=mysqli_fetch_array($data))
 {
   echo "<tr>
@@ -29,7 +34,7 @@ while($data1=mysqli_fetch_array($data))
   </tr>";
   echo "<tr>
   <td colspan='4' align='center'>
-  <button onclick='confirmBuyAction(this.value);' value='".$data1['id']."'>Buy This</button>
+  <button id='buy' onclick='confirmBuyAction(this.value);' value='".$data1['id']."'>Buy This</button>
   </td></tr>";
   echo "<tr><td colspan='4'><hr></td></tr>";
 }

@@ -67,7 +67,7 @@ if($upload==4)
 
  if(mysqli_query($conn,"UPDATE $type SET photo_1='$photo_1', photo_2='$photo_2',photo_3='$photo_3',photo_4='$photo_4' WHERE id = '$product_id'"))
  {
-   echo "sell_index.php";
+   echo "buy_sell_status.php";
 
    unset($_SESSION['product_type']);
    unset($_SESSION['product_name']);

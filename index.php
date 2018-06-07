@@ -16,7 +16,8 @@ if(!isset($_SESSION['user']))
 <link  type="text/css" href="css/main.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/village.css">
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="css/big_screen.css">
+<link rel="stylesheet" type="text/css" href="css/global.css">
 <script src="./js/ajax.js" type="text/jscript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -143,68 +144,70 @@ return false;
 };
 */
 //############################ UPLOADING FILES #################################
-// function uploadFile(){
-// var upload = document.getElementById('uploadimage');
-// $.ajax({
-// url: "upload_files_action.php", // Url to which the request is send
-// type: "post",             // Type of request to be send, called as method
-// enctype: 'multipart/form-data',
-// data: new FormData(upload), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
-// contentType: false,       // The content type used when sending data to the server.
-// cache: false,             // To unable request pages to be cached
-// processData:false,        // To send DOMDocument or non processed data file it is set to false
-// success: function(data)   // A function to be called if request succeeds
-// {
-// $("#page").load(data);
-// }
-// });
-// return false;
-// };
-
-//
-// $(document).ready(function(e){
-//     $("#fupForm").on('submit', function(e){
-//       alert("ahilu");
-//         e.preventDefault();
-//         $.ajax({
-//             type: 'POST',
-//             url: 'upload_files_action.php',
-//             data: new FormData(this),
-//             contentType: false,
-//             cache: false,
-//             processData:false,
-//             beforeSend: function(){
-//                 $('.submitBtn').attr("disabled","disabled");
-//                 $('#fupForm').css("opacity",".5");
-//             },
-//             success: function(msg){
-//                 $('.statusMsg').html('');
-//                 if(msg == 'ok'){
-//                     $('#fupForm')[0].reset();
-//                     $('.statusMsg').html('<span style="font-size:18px;color:#34A853">Form data submitted successfully.</span>');
-//                 }else{
-//                     $('.statusMsg').html('<span style="font-size:18px;color:#EA4335">Some problem occurred, please try again.</span>');
-//                 }
-//                 $('#fupForm').css("opacity","");
-//                 $(".submitBtn").removeAttr("disabled");
-//             }
-//         });
-//     });
-//
-//     //file type validation
-//     $("#file").change(function() {
-//         var file = this.files[0];
-//         var imagefile = file.type;
-//         var match= ["image/jpeg","image/png","image/jpg"];
-//         if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
-//             alert('Please select a valid image file (JPEG/JPG/PNG).');
-//             $("#file").val('');
-//             return false;
-//         }
-//     });
-// });
+/*
+ function uploadFile(){
+ var upload = document.getElementById('uploadimage');
+ $.ajax({
+ url: "upload_files_action.php", // Url to which the request is send
+ type: "post",             // Type of request to be send, called as method
+ enctype: 'multipart/form-data',
+ data: new FormData(upload), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+ contentType: false,       // The content type used when sending data to the server.
+ cache: false,             // To unable request pages to be cached
+ processData:false,        // To send DOMDocument or non processed data file it is set to false
+ success: function(data)   // A function to be called if request succeeds
+ {
+ $("#page").load(data);
+ }
+ });
+ return false;
+ };
 
 
+ $(document).ready(function(e){
+     $("#fupForm").on('submit', function(e){
+       alert("ahilu");
+         e.preventDefault();
+         $.ajax({
+             type: 'POST',
+             url: 'upload_files_action.php',
+             data: new FormData(this),
+             contentType: false,
+             cache: false,
+             processData:false,
+             beforeSend: function(){
+                 $('.submitBtn').attr("disabled","disabled");
+                 $('#fupForm').css("opacity",".5");
+             },
+             success: function(msg){
+                 $('.statusMsg').html('');
+                 if(msg == 'ok'){
+                     $('#fupForm')[0].reset();
+                     $('.statusMsg').html('<span style="font-size:18px;color:#34A853">Form data submitted successfully.</span>');
+                 }else{
+                     $('.statusMsg').html('<span style="font-size:18px;color:#EA4335">Some problem occurred, please try again.</span>');
+                 }
+                 $('#fupForm').css("opacity","");
+                 $(".submitBtn").removeAttr("disabled");
+             }
+         });
+     });
+*/
+/*
+     //file type validation
+     $("#file").change(function() {
+         var file = this.files[0];
+         var imagefile = file.type;
+         var match= ["image/jpeg","image/png","image/jpg"];
+         if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+             alert('Please select a valid image file (JPEG/JPG/PNG).');
+             $("#file").val('');
+             return false;
+         }
+     });
+ });
+
+*/
 
 function confirmBuy(id) {
          var id=id;
@@ -243,24 +246,24 @@ function confirmBuyAction(id) {
     <div onclick="launchIntoFullscreen(document.documentElement);" >
     <div class="topright" onclick="exitFullscreen();"><img id="close" src="image/close.png" /></div>
     <div id="page">
-      <div class="12"  onclick="setPresent('index.php');loadPage('v_menu.php');">
-      <div class="col-12 t_center t_white">
+      <div class="col-12"  onclick="setPresent('index.php');loadPage('v_menu.php');">
+      <div class="col-12 index">
         <h1>RICTech</h1>
         <h4>Rural Information and Communication Technology</h4>
 
       </div>
       <div class="col-12">
       <!--What is RICTech -->
-        <div class="col-6 what">
+        <div id="left" class="col-6">
 
-          <h3 class="t_center">  What is RICTech?</h3>
+          <h3>  What is RICTech?</h3>
           <p>RICTech is an ICT based Web-App for information dissemination at rural areas.</p>
           <p>Rural People have limited access to information due to low literacy. These low-literate individuals cannot gather information from different highly informacial
             websites by themselves as they are complex and alien for those who are new to information technology</p>
           <p> Therefore RICTech aims at simplifying the information gathering process for these low-literate community by sorting out the most necessary informations for them</p>
         </div>
         <!--How RICTech Functions -->
-        <div class="col-6 how">
+        <div id="right" class="col-6">
 
           <h3 class="t_center">  How RICTech Functions?</h3>
           <p>RICTech consists of Web browser, a Web Server and Database designed to collect information from reliable resource sites and provide them to the villagers in simple
@@ -271,7 +274,8 @@ function confirmBuyAction(id) {
     </div>
   </div>
       <div class="col-5 empty"></div>
-      <div class="col-2 t_center button" onclick="setPresent('index.php');loadPage('v_menu.php');"><h4><b>Continue to Menu</b></h4></div><div class="col-5 empty"></div>
+      <div class="col-2 button_index button1  " onclick="setPresent('index.php');loadPage('v_menu.php');"><h4>Continue to Menu</h4></div>
+      <div class="col-5 empty"></div>
     </div>
     </div>
 

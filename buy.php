@@ -8,56 +8,40 @@ if(isset($_SESSION['buy_sell']) && ($_SESSION['buy_sell']=='authenticated')){
 }else{
 
 $_SESSION['buy_sell']="buy";
-/*
-session_start();
-if(!isset($_SESSION['user']))
-{
-  header("Location: design_login.php?ori_log=buy_sell.php");
-  die();
-}else{
-*/
-  ?>
- 
-  <head>
-      <title>Buy</title>
-      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-      <script>
+?>
 
-      </script>
+  <div class="col-12 index">
+    <h1>RICTech: Buy Login</h1>
+  </div>
 
-  </head>
-  <body>
+      <div class="col-1 empty"></div>
+      <div class="col-1 button button1" onclick="goBack();"><h4><b>Back</b></h4></div>
+      <div class="col-3 empty"></div>
+      <div class="col-2 empty" ></div>
+      <div class="col-3 empty"></div>
+      <div class="col-1 button button1" onclick="loadPage('index.php')"><h4><b>Home</b></h4></div>
+      <div class="col-1 empty"></div>
 
-      <div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
-      <h4><b>Home</b></h4></div><div class="col-1"></div>
-    <!--  <div class="col-6 red t_center t_white" onclick="setPresent('sell.php');loadPage('otp_authentication/sell_index.php');">
-        <h2></h2>
-      </div>
-    -->
    <div class="col-12">
-    <!--<div class="col-6 orange t_center t_white" onclick="setPresent('');loadPage('')">
-          <h2></h2>
-        </div>
-     -->
      <?php
      if(!empty($error_message))
   ?>
         <center>
           <form id="submit_otp" style="display:none">
-             <table>
-            <tr><td>Enter OTP: </td><td><input type="text" id="ip_otp" placeholder="OTP"></td></tr>
-            <tr><td colspan="2"><input type="submit" value="submit" onclick="return submit_otp();">&nbsp;<input type="reset" value="Reset">
+             <table id="buy1">
+            <tr><td><h3>Enter OTP:</h3> </td><td><input type="text" id="ip_otp" placeholder="OTP"></td></tr>
+            <tr><td colspan="2"><input type="submit" value="Submit" onclick="return submit_otp();"><input type="reset" value="Reset">
               <p style="color:Red;font-size:30px;" id="otp_msg"></p></td></tr>
           </table>
           </form>
 
 
      <form id="req_otp">
-       <table>
-         <tr><td>Phone:</td><td> <input type="text" id="number"></td></tr>
-         <tr><td colspan="2"><input type="submit" value="submit" onclick="return req_otp();">&nbsp;<input type="reset" value="Reset">
-           <p style="color:Red;font-size:30px;" id="msg"></p></td></tr>
-         <tr></tr>
+       <table id="buy2">
+         <tr><td><h3>Phone Number:</h3></td><td> <input type="text" id="number" placeholder="Phone Number" required></td></tr>
+         <tr><td colspan="2"><input type="submit" value="Submit" onclick="return req_otp();"><input type="reset" value="Reset"></td></tr>
+          <tr><td colspan="2" id="message"> <p style="color:Red;font-size:30px;" id="msg"></p></td></tr>
+
        </table>
      </form>
 
@@ -67,7 +51,5 @@ if(!isset($_SESSION['user']))
 
 
       </div>
-  </body>
-</html>
 
 <?php  } ?>

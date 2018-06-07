@@ -1,15 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-* {
-  box-sizing: border-box;
-}
-body{
-  background: #383637;
-  height:100vh;
-}
 
 
-
-/* -------------------------- Small Screen ------------------------ */
+/* -------------------------- Tiny Screen ------------------------ */
 [class*="col-"] {
   width: 100%;
   float: left;
@@ -17,10 +8,27 @@ body{
 
 }
 
+.empty{
+    display:none;
+}
+
+
+/*##############################Small Screen ###################################*/
+
 @media only screen and (max-width:300px)
 {
   table, thead, tbody, th, td, tr {
       display: block;
+    }
+
+.empty{
+        display:none;
+    }
+
+  .col-12_index {
+      width:100%;
+      text-align:center;
+      color:white;
     }
 }
 
@@ -29,49 +37,42 @@ body{
 @media only screen and (min-width:300px) and (max-width:500px)
 {
 
+
+/*####OLD==WHICH CAN BE DELETED LATER*/
+
   [class*="col-"] {
     width: 50%;
     float: left;
     border: 1px solid black;
-
   }
 
   .heading{
     display: none;
   }
 
-  table, thead, tbody, th, td, tr {
-      display: block;
-    }
-  .empty{
+      table, thead, tbody, th, td, tr {
+          display: block;
+        }
+.empty{
     display:none;
-  }
-
-}
-
-/* -------------------------- Large Screen -------------------------- */
-@media only screen and (min-width:500px)
-{
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-img{
-  width: 30vw;
 }
 
 
 
 }
+/*####OLD ENDS HERE*/
+
+  .col-12_index {
+      width:100%;
+      text-align:center;
+      color:white;
+    }
+
+
+}
+
+/* ###################################### Large Screen ################################ */
+
 
 /* ------------------------------ Screen End -------------------------- */
 #buy_confirm img{
@@ -116,13 +117,10 @@ align-items: center;
 }
 
 .what{
-  padding:1vw;
-  background-color: #43cd4d;
-  text-align: justify;
+
 }
 .how{
-  padding:1vw;
-  background-color: #3dbea1;
+
 }
 
 .t_center{
@@ -137,16 +135,6 @@ align-items: center;
 
 .grey_color{
   background: #383637;
-}
-
-.button{
-  background-color: #6afe78;
-  min-height:30px;
-  border-radius:10px;
-}
-
-.back{
-
 }
 
 
@@ -173,35 +161,17 @@ align-items: center;
 
       box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
       cursor:pointer;
-
-
       padding: 5px;
       text-align: center;
 
 }
 
-.topright {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 18px;
-}
+
 .row{
   text-align:center;
 
 }
 
-#close {
-   line-height: 12px;
-   width: 25px;
-   font-size: 8pt;
-   font-family: tahoma;
-   margin-top: 1px;
-   margin-right: 2px;
-   position:absolute;
-   top:0;
-   right:0;
-}
 
 
 

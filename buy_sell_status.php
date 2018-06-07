@@ -13,11 +13,21 @@ $spices=mysqli_query($conn,"SELECT * FROM spices WHERE seller='$id'") or die(mys
 $vegetables=mysqli_query($conn,"SELECT * FROM vegetables WHERE seller='$id'") or die(mysqli_error($conn));
 
 ?>
-<div class="col-1"></div><div class="col-1 button t_center" onclick="goBack();"><h4><b>Back</b></h4></div><div class="col-3"></div><div class="col-2" ></div><div class="col-3"></div><div class="col-1 button t_center" onclick="loadPage('index.php')">
-<h4><b>Home</b></h4></div><div class="col-1"></div>
-<div class="col-12">
+<div class="col-12 index">
+  <h1>RICTech: Buy and Sell Status</h1>
+</div>
+<div class="col-1 empty"></div>
+<div class="col-1 button button1" onclick="goBack();"><h4><b>Back</b></h4></div>
+<div class="col-3 empty"></div>
+<div class="col-2 button button1" onclick="loadPage('buy_sell.php')"><h4><b>Buy & Sell</b></h4></div>
+<div class="col-3 empty"></div>
+<div class="col-1 button button1" onclick="loadPage('index.php')"><h4><b>Home</b></h4></div>
+<div class="col-1 empty"></div>
+
+<div class="col-12 buy_sell_status">
+  <h3>Sell Status</h3>
 <?php
-echo "<table id='sell_status'>";
+echo "<table align='center' id='sell_status'>";
 if(mysqli_num_rows($cereals)>0){
 while($data1=mysqli_fetch_array($cereals))
 {
@@ -130,10 +140,10 @@ echo "</table>";
 
 
 
-$buy=mysqli_query($conn,"SELECT * FROM buy_request WHERE seller='$id'") or die(mysqli_error($conn));
+$buy=mysqli_query($conn,"SELECT * FROM buy_requests WHERE buyer='$id'") or die(mysqli_error($conn));
 
 if(mysqli_num_rows($buy)>0){
-  echo "<table id='buy_status'>";
+  echo "<h3>Buy Status</h3><table align='center' id='buy_status'>";
   while($data1=mysqli_fetch_array($buy))
   {
 
