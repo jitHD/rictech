@@ -35,6 +35,24 @@ function loadPage(page_name){
   return false;
 };
 
+function loadKvk(kvk_name){
+  var page=kvk_name;
+  $.ajax({
+    type:'get',
+    url:'load_kvk.php',
+    data:{area:page},
+    cache:false,
+    success:function(data){
+      $('#kvk_info').html(data);
+    }
+  })
+  return false;
+};
+
+
+
+
+
 function req_otp()
 {
   var number=document.getElementById('number').value;

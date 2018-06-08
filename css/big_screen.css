@@ -559,6 +559,30 @@ input[type=float] {
 .agriculture {
   align-items: center;
 }
+.agriculture td {
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: bold;
+}
 .agriculture a {
   text-decoration: none;
+}
+#kvk_info {
+  width: 35vw;
+  text-align: center;
+}
+#kvk_info td {
+  border: 1px dotted #000000;
+}
+#kvk_info td:hover {
+  background-color: #e0e0e0;
+}
+#important_links {
+  text-align: center;
+}
+#expert_advice {
+  width: 100%;
+  text-align: center;
+  background-color: #b9e3ee;
+  padding-bottom: 5px;
 }
